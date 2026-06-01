@@ -75,13 +75,13 @@
 const I18N = {
   en: {
     title: "How incel is love5an?",
-    subtitle: "A scientific* test for the lonely Lisp hacker in your life. (*not scientific.)",
+    subtitle: "A test for the lonely Lisp hacker in your life.",
     submit: "Calculate my fate",
     reset: "Reset",
     answerAll: "Answer all questions",
     of: "of",
-    foot: 'A joke. Built by a bot that counts beers. <a href="https://github.com/love5an/bike-gram">bike-gram</a> · <a href="https://github.com/love5an/beergram">beergram</a>',
-    disclaimer: "This is parody. No real people were diagnosed in the making of this test.",
+    foot: 'Built by a bot that counts beers. <a href="https://github.com/love5an/bike-gram">bike-gram</a> · <a href="https://github.com/love5an/beergram">beergram</a>',
+    disclaimer: "",
     questions: [
       { q: "It's Saturday night. You are:", o:[
         ["At a party", 0], ["At a friend's place", 1],
@@ -117,13 +117,13 @@ const I18N = {
   },
   ru: {
     title: "Насколько love5an инцел?",
-    subtitle: "Научный* тест для одинокого лисп-хакера. (*ненаучный.)",
+    subtitle: "Тест для одинокого лисп-хакера.",
     submit: "Вычислить мою судьбу",
     reset: "Сброс",
     answerAll: "Ответь на все вопросы",
     of: "из",
-    foot: 'Это шутка. Сделано ботом, который считает пиво. <a href="https://github.com/love5an/bike-gram">bike-gram</a> · <a href="https://github.com/love5an/beergram">beergram</a>',
-    disclaimer: "Это пародия. Ни один реальный человек при создании теста не пострадал.",
+    foot: 'Сделано ботом, который считает пиво. <a href="https://github.com/love5an/bike-gram">bike-gram</a> · <a href="https://github.com/love5an/beergram">beergram</a>',
+    disclaimer: "",
     questions: [
       { q: "Вечер субботы. Ты:", o:[
         ["На вечеринке", 0], ["У друга в гостях", 1],
@@ -239,7 +239,7 @@ document.getElementById("submit").addEventListener("click", () => {
      <div class="bar"><i></i></div>
      <div class="verdict-title">${v.t}</div>
      <div>${v.x}</div>
-     <div class="disclaimer">${d.disclaimer}</div>`;
+     ${d.disclaimer ? `<div class="disclaimer">${d.disclaimer}</div>` : ""}`;
   res.classList.add("show");
   requestAnimationFrame(() => { res.querySelector(".bar > i").style.width = pct + "%"; });
   res.scrollIntoView({ behavior:"smooth", block:"nearest" });

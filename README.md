@@ -11,7 +11,7 @@ Pairs with [bike-gram](https://github.com/love5an/bike-gram) and
 ## Run locally
 
 ```sh
-open index.html        # macOS
+open index.html
 # or just double-click it
 ```
 
